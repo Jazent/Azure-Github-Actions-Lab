@@ -1,8 +1,9 @@
+param storageName string = 'vstorageAccount'
 param location string = resourceGroup().location
 
 resources storage
   'Microsoft.Storage/storageAccounts@2023-01-01' = {
-    name: 'vstorageAccount'
+    name: storageName
     location: location
     sku: {
       name: 'Standard_LRS'
@@ -10,3 +11,4 @@ resources storage
     kind: 'StorageV2'
   }
 
+output storageAccountId string = storageAccount.id
