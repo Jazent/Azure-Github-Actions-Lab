@@ -3,7 +3,7 @@ name: Deploy Lab
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 permissions:
