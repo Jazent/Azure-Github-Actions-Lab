@@ -1,5 +1,5 @@
-param storageName string = 'vstorageAccount'
-param location string = resourceGroup().location
+param storageName string
+param location string
 
 resources storage
   'Microsoft.Storage/storageAccounts@2023-01-01' = {
